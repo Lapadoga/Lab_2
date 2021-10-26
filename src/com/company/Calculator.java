@@ -10,18 +10,16 @@ import java.util.Stack;
  * / (division)
  * "("and ")"
  * Outputs the answer in double.
- *
- * @author Evgeniy Petrov
  */
 public class Calculator {
 
-    private Stack<Double> numbers; //Stack with all numbers
-    private Stack<Character> operations; //Stack with all operations
-    public String expression; // Mathematical expression
-    private int currentIndex; // The current index in the row
-    private int flagChanges; // -1 - if nothing has started, 0 - if number, 1 - if operations
-    private boolean unarMinus; // A flag that checks for the possibility of a unary minus
-    private boolean flagOfOpenBrackets; // Flag for checking open brackets
+    private Stack<Double> numbers;
+    private Stack<Character> operations;
+    public String expression;
+    private int currentIndex;
+    private int flagChanges;
+    private boolean unarMinus;
+    private boolean flagOfOpenBrackets;
     /**
      * Class Constructor
      * Assigns the desired values to variables.
@@ -128,7 +126,7 @@ public class Calculator {
                     }
                 }
                 flagOfOpenBrackets = false;
-                flagChanges = -1;
+                flagChanges = 0;
                 currentIndex++;
                 unarMinus = false;
             }

@@ -13,14 +13,14 @@ public class Main {
                 "/ (division)\n" +
                 "\"(\"and \")\"" +
                 "\n Insert the expression: ");
-        try {
-            while (true) {
-                String exp = sc.nextLine();
+        while (true) {
+            String exp = sc.nextLine();
+            try {
                 Calculator pars = new Calculator(exp);
                 System.out.println(pars.computing());
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
             }
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
         }
     }
 }

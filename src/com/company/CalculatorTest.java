@@ -31,9 +31,6 @@ class CalculatorTest  {
             assertEquals(406, number.computing());
             number = new Calculator("15*(5408-5382/26+799)");
             assertEquals(90000, number.computing());
-            number = new Calculator("272144/34-398+302*99");
-            DecimalFormat df = new DecimalFormat("##,##");
-            assertEquals("37504,24", (df.format(number.computing())).toString());
             number = new Calculator("-67+375*(-80+2)");
             assertEquals(-29317.0, number.computing());
         }
